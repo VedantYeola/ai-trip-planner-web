@@ -86,6 +86,7 @@
 
 
 import React from "react";
+
 import HotelCarditems from "./HotelCarditems";
 
 function Hotels({ trip }) {
