@@ -14,6 +14,7 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 import axios from "axios";
+import Header from "./components/custom/Header";  // Path must be correct
 
 function Header() {
   const user = JSON.parse(localStorage.getItem("user"));
