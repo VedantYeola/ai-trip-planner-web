@@ -86,7 +86,6 @@
 
 
 import React from "react";
-import { Link } from "react-router-dom";
 import HotelCarditems from "./HotelCarditems";
 
 function Hotels({ trip }) {
