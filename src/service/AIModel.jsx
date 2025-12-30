@@ -5,7 +5,7 @@
 //   import {
 //       GoogleGenAI,
 //     } from '@google/genai';
-    
+
 //     async function main() {
 //       const ai = new GoogleGenAI({
 //         apiKey: import.meta.env.VITE_GOOGLE_GEMINI_AI_API_KEY,
@@ -28,8 +28,8 @@
 //           parts: [
 //             {
 //               text: `I cannot access real-time information, including live pricing for hotels and attractions, or retrieve images from URLs.  Therefore, I can't provide the image URLs or exact current prices.  However, I can give you a JSON structure with the information you requested, populated with placeholder values. You will need to use online search engines (like Google, Expedia, Booking.com, etc.) to find current prices, hotel availability, and images.
-    
-    
+
+
 //     \`\`\`json
 //     {
 //       "tripDetails": {
@@ -111,7 +111,7 @@
 //               "timeToSpend": "1 hour",
 //               "bestTime": "Evening (for best visual effect)"
 //             }
-    
+
 //           ]
 //         },
 //         "day3": {
@@ -148,7 +148,7 @@
 //     }
 //   }
 //   \`\`\`
-  
+
 //   Remember to replace all placeholder values with actual data before using this plan.  Consider transportation costs (Uber, Lyft, or bus) when budgeting.  Cheap eats are plentiful in Vegas – look for buffets, food courts, and local eateries to save money on food.  Enjoy your trip!
 //   `,
 //           },
@@ -163,7 +163,7 @@
 //         ],
 //       },
 //     ];
-  
+
 //     const response = await ai.models.generateContentStream({
 //       model,
 //       config,
@@ -173,7 +173,7 @@
 //       console.log(chunk.text);
 //     }
 //   }
-  
+
 //   main();
 
 
@@ -193,7 +193,7 @@ export async function generateTripPlan(prompt) {
     responseMimeType: 'application/json',
   };
 
-  const model = 'gemini-1.5-flash';
+  const model = 'gemini-1.5-flash-001';
 
   const contents = [
     {

@@ -50,5 +50,13 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VedantYeola/ai-trip-planner-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VedantYeola/ai-trip-planner-web/issues"
+  },
+  "homepage": "https://github.com/VedantYeola/ai-trip-planner-web#readme"
 }

@@ -64,12 +64,12 @@ function Hero() {
       </video>
 
       {/* Content Overlay */}
-      <div className='relative z-10 bg-white/80 backdrop-blur-md p-10 rounded-xl max-w-4xl mx-4 text-center flex flex-col items-center gap-6'>
-        <h1 className='font-extrabold text-[50px] text-center text-[#f56551]'>
+      <div className='relative z-10 bg-white/80 backdrop-blur-md p-5 md:p-10 rounded-xl max-w-4xl mx-4 text-center flex flex-col items-center gap-6'>
+        <h1 className='font-extrabold text-3xl md:text-[50px] text-center text-[#f56551] leading-tight'>
           Discover Your Next Adventure with AI:
         </h1>
-        <h2 className="text-3xl font-semibold">Personalized Itineraries at your Fingertips</h2>
-        <p className='text-xl text-gray-600'>
+        <h2 className="text-xl md:text-3xl font-semibold">Personalized Itineraries at your Fingertips</h2>
+        <p className='text-sm md:text-xl text-gray-600'>
           Your personal trip planner and travel curator, creating custom itineraries tailored to your interests and budget.
         </p>
         <Link to="/create-trip">
