@@ -52,7 +52,6 @@ function CreateTrip() {
 
     if (
       !formData?.noOfDays ||
-      formData.noOfDays > 5 ||
       !formData?.location ||
       !formData?.budget ||
       !formData?.travelers
@@ -125,12 +124,13 @@ function CreateTrip() {
   };
 
   const GetUserProfile = (tokenInfo) => {
+    console.log("Token Received:", tokenInfo);
     axios
       .get(
-        `https://www.googleapis.com/oauth2/v3/userinfo`,
+        `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${tokenInfo?.access_token}`,
         {
           headers: {
-            Authorization: `Bearer ${tokenInfo.access_token}`,
+            Authorization: `Bearer ${tokenInfo?.access_token}`,
             Accept: "application/json",
           },
         }
@@ -139,6 +139,13 @@ function CreateTrip() {
         localStorage.setItem("user", JSON.stringify(resp.data));
         setOpenDialog(false);
         onGenerateTrip();
+      })
+      .catch((error) => {
+        console.error("Failed to fetch user profile:", error);
+        if (error.response && error.response.status === 401) {
+          console.error("401 Unauthorized - Invalid Token");
+        }
+        toast.error("Failed to login. Please try again.");
       });
   };
 
