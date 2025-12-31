@@ -127,7 +127,7 @@ function CreateTrip() {
   const GetUserProfile = (tokenInfo) => {
     axios
       .get(
-        `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${tokenInfo.access_token}`,
+        `https://www.googleapis.com/oauth2/v3/userinfo`,
         {
           headers: {
             Authorization: `Bearer ${tokenInfo.access_token}`,
